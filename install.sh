@@ -28,9 +28,9 @@ for bp in "${brewPackages[@]}"; do
   /home/linuxbrew/.linuxbrew/bin/brew install "$bp"
 done
 
-echo "use zsh"
+# echo "use zsh"
 # * exec zsh
-exec zsh
+# exec zsh
 
 # * remove brew/core for storage space
 echo "untap homebrew/core"

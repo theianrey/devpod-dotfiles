@@ -36,6 +36,12 @@ export GOPATH="$HOME/go/"
 
 # ~~~~~~~~~~~~~~~ Path configuration ~~~~~~~~~~~~~~~~~~~~~~~~
 
+# ~~~~~~~~~~~~~~~ History ~~~~~~~~~~~~~~~~~~~~~~~~
+
+export HISTFILE=~/.histfile
+export HISTSIZE=25000
+export SAVEHIST=25000
+export HISTCONTROL=ignorespace
 
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -82,7 +88,7 @@ fi
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "xterm-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
+if [ -z "${NOZSH}" ] && [ $TERM = "xterm" -o $TERM = "screen-256color" -o $TERM = "screen" ] && type zsh &> /dev/null
 then
     export SHELL=$(which zsh)
     if [[ -o login ]]
@@ -91,8 +97,6 @@ then
     else
         exec zsh
     fi
-
-		eval "$(starship init zsh)"
 fi
 
 # ~~~~~~~~~~~~~~~ Aliases ~~~~~~~~~~~~~~~~~~~~~~~~
