@@ -8,14 +8,6 @@ ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =zshrc
 ln -s "$PWD/.zshrc" "$XDG_CONFIG_HOME"/.zshrc
 
-#
-install_packages git
-
-# HOMEBREW
-echo "Installing homebrew..."
-source "$PWD/homebrew.sh"
-echo "Done homebrew install."
-
 # * packages
 brewPackages=(
   zsh
