@@ -6,13 +6,13 @@ mkdir -p "$XDG_CONFIG_HOME"
 # =nvim
 ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =bashrc
-# echo "linking .bashrc"
-# mv "$HOME"/.bashrc "$HOME"/.bashrc-bak
-# ln -s "$PWD/.bashrc" "$HOME"/.bashrc
+echo "linking .bashrc"
+mv "$HOME"/.bashrc "$HOME"/.bashrc-bak
+ln -s "$PWD/.bashrc" "$HOME"/.bashrc
 # =zshrc
-# echo "linking .zshrc"
-# mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
-# ln -s "$PWD/.zshrc" "$HOME"/.zshrc
+echo "linking .zshrc"
+mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
+ln -s "$PWD/.zshrc" "$HOME"/.zshrc
 
 # * packages
 brewPackages=(
