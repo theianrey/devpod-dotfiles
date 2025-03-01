@@ -6,15 +6,16 @@ mkdir -p "$XDG_CONFIG_HOME"
 # =nvim
 ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =zshrc
+ln -s "$PWD/.bashrc" "$XDG_CONFIG_HOME"/.bashrc
 ln -s "$PWD/.zshrc" "$XDG_CONFIG_HOME"/.zshrc
 
 # * packages
 brewPackages=(
-  zsh
   fd
   rigrep
   starship
   lazygit
+  zsh
 )
 
 for bp in "${brewPackages[@]}"; do
@@ -23,8 +24,4 @@ for bp in "${brewPackages[@]}"; do
   /home/linuxbrew/.linuxbrew/bin/brew install "$bp"
 done
 
-# set zsh shell
-chsh -s $(which zsh)
-
-echo "go: $RUNTIME"
 echo "All packages from the setup script have been installed."
