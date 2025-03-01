@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+# ! kinawat ni gikan sa devontainer features
+
 BREW_PREFIX=${BREW_PREFIX:-"/home/linuxbrew/.linuxbrew"}
 SHALLOW_CLONE=${SHALLOWCLONE:-"true"}
 USERNAME=${USERNAME:-"automatic"}

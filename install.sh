@@ -8,10 +8,9 @@ ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =zshrc
 ln -s "$PWD/.zshrc" "$XDG_CONFIG_HOME"/.zshrc
 
+# HOMEBREW
 echo "Installing homebrew..."
-
-./"$PWD"/homebrew.sh
-
+source "$PWD/homebrew.sh"
 echo "Done homebrew install."
 
 # * packages
