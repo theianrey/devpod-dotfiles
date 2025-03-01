@@ -7,16 +7,17 @@ mkdir -p "$XDG_CONFIG_HOME"
 ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =bashrc
 echo "linking .bashrc"
+mv "$HOME"/.bashrc "$HOME"/.bashrc-bak
 ln -s "$PWD/.bashrc" "$HOME"/.bashrc
 # =zshrc
 echo "linking .zshrc"
+mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
 ln -s "$PWD/.zshrc" "$HOME"/.zshrc
 
 # * packages
 brewPackages=(
   fd
   rigrep
-  starship
   lazygit
   zsh
 )
@@ -27,7 +28,7 @@ for bp in "${brewPackages[@]}"; do
   /home/linuxbrew/.linuxbrew/bin/brew install "$bp"
 done
 
-
+echo "use zsh"
 # * exec zsh
 exec zsh
 
