@@ -6,8 +6,8 @@ mkdir -p "$XDG_CONFIG_HOME"
 # =nvim
 ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =zshrc
-ln -s "$PWD/.bashrc" "$XDG_CONFIG_HOME"/.bashrc
-ln -s "$PWD/.zshrc" "$XDG_CONFIG_HOME"/.zshrc
+ln -s "$PWD/.bashrc" "$HOME"/.bashrc
+ln -s "$PWD/.zshrc" "$HOME"/.zshrc
 
 # * packages
 brewPackages=(
