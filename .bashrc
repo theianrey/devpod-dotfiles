@@ -18,8 +18,10 @@ bind -x '"\C-l":clear'
 export SHELL=$(which zsh)
 if [[ -o login ]]
 then
-    exec zsh -l
+		echo "exec zsh login"
+  	exec zsh -l
 else
+		echo "exec zsh"
     exec zsh
 fi
 
