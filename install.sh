@@ -8,14 +8,14 @@ ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =bashrc
 echo "linking .bashrc"
 mv "$HOME"/.bashrc "$HOME"/.bashrc-bak
-mv -s "$PWD/.bashrc" "$HOME"/.bashrc
+mv "$PWD/.bashrc" "$HOME"/.bashrc
 # =zshrc
 echo "linking .zshrc"
 mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
-mv -s "$PWD/.zshrc" "$HOME"/.zshrc
+mv "$PWD/.zshrc" "$HOME"/.zshrc
 # =profile
 echo "linking .profile"
-mv "$PWD"/.profile "$HOME"/.profile
+#mv "$PWD"/.profile "$HOME"/.profile
 
 # * packages
 brewPackages=(
