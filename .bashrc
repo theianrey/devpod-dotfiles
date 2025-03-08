@@ -15,15 +15,12 @@ bind -x '"\C-l":clear'
 
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
-if [ -z "${NOZSH}" ] && [ $TERM = "xterm-256color" -o $TERM = "screen-256color" -o $TERM = "tmux-256color" ] && type zsh &> /dev/null
+export SHELL=$(which zsh)
+if [[ -o login ]]
 then
-    export SHELL=$(which zsh)
-    if [[ -o login ]]
-    then
-        exec zsh -l
-    else
-        exec zsh
-    fi
+    exec zsh -l
+else
+    exec zsh
 fi
 
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
