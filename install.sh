@@ -32,8 +32,7 @@ for bp in "${brewPackages[@]}"; do
 done
 
 # echo "use zsh"
-# * exec zsh
-# exec zsh
+source "$HOME"/.bashrc
 
 # * remove brew/core for storage space
 echo "untap homebrew/core"
