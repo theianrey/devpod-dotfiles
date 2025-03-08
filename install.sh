@@ -8,11 +8,11 @@ ln -s "$PWD/nvim" "$XDG_CONFIG_HOME"/nvim
 # =bashrc
 echo "linking .bashrc"
 mv "$HOME"/.bashrc "$HOME"/.bashrc-bak
-ln -s "$PWD/.bashrc" "$HOME"/.bashrc
+mv -s "$PWD/.bashrc" "$HOME"/.bashrc
 # =zshrc
 echo "linking .zshrc"
 mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
-ln -s "$PWD/.zshrc" "$HOME"/.zshrc
+mv -s "$PWD/.zshrc" "$HOME"/.zshrc
 # =profile
 echo "linking .profile"
 mv "$PWD"/.profile "$HOME"/.profile
