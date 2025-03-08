@@ -16,15 +16,19 @@ bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ Prompt ~~~~~~~~~~~~~~~~~~~~~~~~
 
 export SHELL=$(which zsh)
-if [[ -o login ]]
-then
-		echo "exec zsh login"
-  	exec zsh -l
+if [ -z "${NOZSH}" ] && \
+   [ "$TERM" = "xterm-256color" -o "$TERM" = "screen-256color" -o "$TERM" = "tmux-256color" -o \ 
+   "$TEMR" = "screen" -o "$TERM" = "xterm" -o "$TERM" = "tmux" ] && \
+   type zsh &>/dev/null; then
+  echo "Conditions met! Starting Zsh..."
+  # exec zsh
+  chsh -s $(which zsh)
 else
-		echo "exec zsh"
-    exec zsh
+  echo "Failed conditions:"
+  [ -z "${NOZSH}" ] || echo "NOZSH is set"
+  [ "$TERM" = "xterm-256color" -o "$TERM" = "screen-256color" -o "$TERM" = "tmux-256color" ] || echo "TERM mismatch"
+  type zsh &>/dev/null || echo "Zsh not found"
 fi
-
 # ~~~~~~~~~~~~~~~ Functions ~~~~~~~~~~~~~~~~~~~~~~~~
 
 # This function is stolen from rwxrob
