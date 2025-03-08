@@ -20,8 +20,7 @@ if [ -z "${NOZSH}" ] && \
    [ "$TERM" = "xterm-256color" -o "$TERM" = "screen-256color" -o "$TERM" = "tmux-256color" -o "$TEMR" = "screen" -o "$TERM" = "xterm" -o "$TERM" = "tmux" ] && \
    type zsh &>/dev/null; then
   echo "Conditions met! Starting Zsh..."
-  # exec zsh
-  chsh -s $(which zsh)
+  exec zsh
 else
   echo "Failed conditions:"
   [ -z "${NOZSH}" ] || echo "NOZSH is set"
