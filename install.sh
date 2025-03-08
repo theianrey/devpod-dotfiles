@@ -15,7 +15,7 @@ mv "$HOME"/.zshrc "$HOME"/.zshrc-bak
 ln -s "$PWD/.zshrc" "$HOME"/.zshrc
 # =profile
 echo "linking .profile"
-mv "$HOME"/.profile "$HOME"/.profile
+mv "$PWD"/.profile "$HOME"/.profile
 
 # * packages
 brewPackages=(
