@@ -5,17 +5,11 @@
 ---@type LazySpec
 return {
   "AstroNvim/astrocommunity",
-  { import = "astrocommunity.recipes.vscode-icons" }, -- use vscode icons
-  { import = "astrocommunity.recipes.heirline-nvchad-statusline" }, -- update status line display
+  
+  { import = "astrocommunity.recipes.heirline-nvchad-statusline" }, -- update status line display 
   -- language packs
   { import = "astrocommunity.pack.lua" },
-  { import = "astrocommunity.pack.json" },
-  { import = "astrocommunity.pack.typescript" },
-  { import = "astrocommunity.pack.go" },
-  { import = "astrocommunity.pack.php" },
-  { import = "astrocommunity.pack.laravel" },
-  { import = "astrocommunity.pack.html-css" },
-  { import = "astrocommunity.pack.tailwindcss" },
   -- icons
   { import = "astrocommunity.icon.mini-icons" },
+  { import = "astrocommunity.recipes.vscode-icons" }, -- use vscode icons
 }

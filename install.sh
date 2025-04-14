@@ -20,7 +20,8 @@ mv "$PWD"/.profile "$HOME"/.profile
 # * packages
 brewPackages=(
   fd
-  rigrep
+  fzf
+  ripgrep
   lazygit
   zsh
 )
